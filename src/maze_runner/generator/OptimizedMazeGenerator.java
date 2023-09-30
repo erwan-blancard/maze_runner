@@ -14,5 +14,19 @@ public class OptimizedMazeGenerator implements MazeGenerator {
 	public Maze generate(int width, int height) {
 		return null;
 	}
+	
+	private class Pos {
+		
+		private int x;
+		private int y;
+		
+		public Pos(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+		
+		public int getX() { return x; }
+		public int getY() { return y; }
+	}
 
 }

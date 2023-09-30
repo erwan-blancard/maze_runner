@@ -20,7 +20,7 @@ public class MazeRunner {
 					
 				printMazeTiles(maze);
 			} catch (Exception e) {
-				System.out.println("Erreur inattendue lors de la génération du labyrinthe. Veuillez réessayer.");
+				System.out.println("Erreur inattendue lors de la génération du labyrinthe. Veuillez réessayer.\nMessage: "+e.getMessage());
 				System.exit(1);
 			}
 		} else {
@@ -92,16 +92,16 @@ public class MazeRunner {
 		return maze;
 	}
 	
-	private static void printMazeTiles(Maze maze) {
+	public static void printMazeTiles(Maze maze) {
 		for (int y = 0; y < maze.getHeight(); y++) {
 			
 			// print 3 lines for 1 tile
 			for (int i = 0; i < 3; i++) {
 
 				for (int x = 0; x < maze.getWidth(); x++) {
-					byte tileType = maze.getTileType(x, y);
+					byte tileType = maze.getTile(x, y).getTileType();
 					
-					System.out.print(Maze.MAZE_TILE_PATTERNS[tileType].substring(i*3, (i*3)+3));
+					System.out.print(MazeTile.MAZE_TILE_PATTERNS[tileType].substring(i*3, (i*3)+3));
 				}
 				System.out.println();
 			}
