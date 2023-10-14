@@ -1,7 +1,5 @@
 package maze_runner.generator;
 
-import maze_runner.Maze;
-
 public class OptimizedMazeGenerator implements MazeGenerator {
 	
 	private boolean usePerfectType;
@@ -10,10 +8,12 @@ public class OptimizedMazeGenerator implements MazeGenerator {
 		this.usePerfectType = usePerfectType;
 	}
 
+	/*
 	@Override
 	public Maze generate(int width, int height) {
 		return null;
 	}
+	*/
 	
 	private class Pos {
 		

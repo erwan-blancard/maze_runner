@@ -10,8 +10,8 @@ public class Maze {
 		tiles = new MazeTile[width][height];
 		
 		// create MazeTile objects
-		for(int y = 0; y < width; y++) {
-			for(int x = 0; x < height; x++) {
+		for(int y = 0; y < height; y++) {
+			for(int x = 0; x < width; x++) {
 				tiles[x][y] = new MazeTile();
 			}
 		}
